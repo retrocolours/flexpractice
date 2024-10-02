@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Arrange child elements in a column */
+    min-height: 100vh; /* Set the minimum height to the full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    flex: 1; /* Allow the container to grow and take up remaining space */
+    padding: 20px; /* Add padding to the container */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.header__image {
+  width: 80px;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+p {
+  padding: 0.1rem 0;
+  font-size: 0.8rem;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.summary__uppercase {
+  text-transform: uppercase;
+}
+
+.summary__center {
+  text-align: center;
+}
+
+.summary__bill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.summary__amount,
+.summary__due,
+.summary__date {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  border: 2px solid grey;
+}
+
+.summary__amount,
+.summary__date {
+  border-right: none;
+}
+
+.items {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.items__container {
+display: flex;
+flex-direction: column;
+  justify-content: space-evenly;
+   
+  /* width: 100%;
+  margin: 0;
+  padding: 0; */
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+
+.payment-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px 0;
+}
+
+.footer {
+  text-align: right;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* .unit-rate, .quantity, .amount {
+    text-align: center;
+} */
