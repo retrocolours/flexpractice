@@ -1,71 +1,67 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   font-family: Arial, sans-serif;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  padding-bottom: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, main, footer */
+  height: 100vh;
 }
-
-main {
-  flex-grow: 1;
-}
-/* This will make the main content grow to fill the remaining space between the header and footer -- note for self, thanks Josh!
-  */
 
 .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: logo/info and invoice */
+  padding: 1rem;
+}
+
+.header__info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
+}
+
+.header__logo {
+  margin-right: 0.6rem;
 }
 
 .header__image {
   width: 80px;
 }
 
-.header__info {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-p {
-  padding: 0.1rem 0;
-  font-size: 0.9rem;
+.header__invoice {
+  align-self: top;
+  text-align: right;
 }
 
 .summary {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: client details and bill summary */
+  padding: 20px;
+}
+
+.summary__client {
+  grid-column: 1 / 2;
+}
+
+.summary__bill {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  text-align: center;
 }
 
 .summary__uppercase {
   text-transform: uppercase;
 }
 
-.summary__center {
-  text-align: center;
-}
-
-.summary__bill {
-  display: flex;
-  justify-content: space-between;
-}
-
-.summary__amount,
+.summary__date,
 .summary__due,
-.summary__date {
+.summary__amount {
   padding: 3rem 2rem;
-  border: 2px solid grey;
+  border: 1px solid grey;
 }
 
 .summary__amount,
@@ -74,35 +70,26 @@ p {
 }
 
 .items {
-  margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Four columns for items, qty, rate, amount */
+  padding: 20px;
 }
 
 .items__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.items__center {
-  text-align: center;
-}
-
-.items__right {
-  text-align: right;
+  display: contents; /* Allows for direct placement of children in the grid */
 }
 
 .payment {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 20px 0;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for payment instructions and total due */
 }
 
 .footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem 0;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  text-align: center;
 }
