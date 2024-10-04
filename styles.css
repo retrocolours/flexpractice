@@ -7,13 +7,13 @@
 body {
   font-family: Arial, sans-serif;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Header, main, footer */
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns: logo/info and invoice */
+  grid-template-columns: 1fr 1fr;
   padding: 1rem;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .summary {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns: client details and bill summary */
+  grid-template-columns: 1fr 1fr;
   padding: 20px;
 }
 
@@ -71,21 +71,18 @@ body {
 
 .items {
   display: grid;
-  grid-template-columns: repeat(
-    4,
-    auto
-  ); /* Four columns for items, qty, rate, amount */
+  grid-template-columns: repeat(4, auto);
   padding: 20px;
   text-align: center;
 }
 
 .items__container {
-  display: contents; /* Allows for direct placement of children in the grid */
+  display: contents; /* Allows for direct placement of children in the grid -- this is something suggested by AI, for some reason without it payment section gets affected and I don't understand why*/
 }
 
 .payment {
   display: grid;
-  grid-template-columns: 1fr auto; /* Two columns for payment instructions and total due */
+  grid-template-columns: 1fr auto;
   align-items: center;
   padding: 1rem;
 }
