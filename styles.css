@@ -73,9 +73,10 @@ body {
   display: grid;
   grid-template-columns: repeat(
     4,
-    1fr
+    auto
   ); /* Four columns for items, qty, rate, amount */
   padding: 20px;
+  text-align: center;
 }
 
 .items__container {
@@ -84,12 +85,12 @@ body {
 
 .payment {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for payment instructions and total due */
+  grid-template-columns: 1fr auto; /* Two columns for payment instructions and total due */
+  align-items: center;
+  padding: 1rem;
 }
 
 .footer {
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  text-align: center;
+  text-align: right;
+  padding: 1rem;
 }
