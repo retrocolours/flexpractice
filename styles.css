@@ -65,7 +65,7 @@ p {
 .summary__due,
 .summary__date {
   padding: 3rem 2rem;
-  border: 2px solid grey;
+  border: 1px solid grey;
 }
 
 .summary__amount,
@@ -90,6 +90,10 @@ p {
 
 .items__right {
   text-align: right;
+}
+
+.items__text--uppercase {
+  text-transform: uppercase;
 }
 
 .payment {
