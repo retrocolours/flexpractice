@@ -1,0 +1,1 @@
+I asked AI for help with GRID regarding the items section (please see my comments in CSS) and also to replace my divs from flexbox with a table just to save time typing. 
