@@ -69,21 +69,46 @@ body {
   border-right: none;
 }
 
-/* table {
-  width: 100vw;
-} */
-
+/* For this part I consulted Legion (I called chatGPT that for fun and now it answers to this name) because I couldn't figure it out unfortunately even with your instructions, I am sorry. 
+So this is Legion's work: */
 .items {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 1fr;
+  justify-content: center;
   padding: 20px;
+}
+
+table {
+  width: 100%;
   text-align: center;
 }
 
-.items__container {
-  display: contents; /* Allows for direct placement of children in the grid -- this is something suggested by AI, for some reason without it payment section gets affected and I don't understand why*/
+th:nth-child(1),
+td:nth-child(1) {
+  text-align: left;
 }
 
+th:nth-child(2),
+td:nth-child(2),
+th:nth-child(3),
+td:nth-child(3) {
+  text-align: center;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  text-align: right;
+}
+
+.items__container {
+  display: contents;
+}
+
+/* My work continues from here:  */
+
+.items--uppercase {
+  text-transform: uppercase;
+}
 .payment {
   display: grid;
   grid-template-columns: 1fr auto;
