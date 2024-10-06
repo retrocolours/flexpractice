@@ -69,8 +69,9 @@ body {
   border-right: none;
 }
 
-/* For this part I consulted Legion (I called chatGPT that for fun and now it answers to this name) because I couldn't figure it out unfortunately even with your instructions, I am sorry. 
-So this is Legion's work: */
+/* For this part I consulted AI because I couldn't figure it out unfortunately even with your instructions, I am sorry. 
+So this is AI's suggestion: */
+
 .items {
   display: grid;
   grid-template-columns: 1fr;
